@@ -1,5 +1,3 @@
-package machine;
-
 import java.util.Scanner;
 
 public class CoffeeMachine {
@@ -70,8 +68,8 @@ public class CoffeeMachine {
                     beans -= 16;
                     cups--;
                     money += 4;
-                    break;
                 }
+		break;
             }
             case "2": {
                 if (canMakeCoffee(350, 75, 20)) {
@@ -80,8 +78,8 @@ public class CoffeeMachine {
                     beans -= 20;
                     cups--;
                     money += 7;
-                    break;
                 }
+		break;
             }
             case "3": {
                 if (canMakeCoffee(200, 100, 12)) {
@@ -90,10 +88,8 @@ public class CoffeeMachine {
                     beans -= 12;
                     cups--;
                     money += 6;
-                    break;
-
                 }
-
+		break;
             }
             case "back": {
                 break;
@@ -140,11 +136,11 @@ public class CoffeeMachine {
     static void remaining() {
         System.out.println();
         System.out.println("The coffee machine has:");
-        System.out.println(water + " of water");
-        System.out.println(milk + " of milk");
-        System.out.println(beans + " of coffee beans");
-        System.out.println(cups + " of disposable cups");
-        System.out.println(money + " of money");
+        System.out.println(water + " ml of water");
+        System.out.println(milk + " ml of milk");
+        System.out.println(beans + " grams of coffee beans");
+        System.out.println(cups + " pieces of disposable cups");
+        System.out.println(money + " dollars");
         System.out.println();
 
         curStatus = Status.CHOOSING;
@@ -159,7 +155,7 @@ public class CoffeeMachine {
         if (water >= waterNeed) {
             if (milk >= milkNeed) {
                 if (beans >= beansNeed) {
-                    System.out.println("I have enough resources, making you a coffee!\n");
+                    System.out.println("The coffee is being ready!\n");
                     return true;
                 } else {
                     System.out.println("Sorry, not enough beans!");
